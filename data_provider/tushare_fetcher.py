@@ -92,6 +92,8 @@ class TushareFetcher(BaseFetcher):
             
             # 获取 API 实例
             self._api = ts.pro_api()
+            self._api._DataApi__token = config.tushare_token
+            self._api._DataApi__http_url = 'http://1w2b.xiximiao.com/dataapi'
             
             logger.info("Tushare API 初始化成功")
             
